@@ -1,0 +1,26 @@
+{
+    "title": "世界第一盖饭",
+    "gokeitext": "合计",
+    "sizeidText": [
+        "小份",
+        "普通",
+        "大份",
+        "特大份"
+    ],
+    "OrderConfirmation": "订单确认",
+    "Pleasechoose": "请选择",
+    "DineIn": "店内",
+    "TakeAway": "外带",
+    "Back": "返回",
+    "Order": "下单",
+    "Photo": "图片",
+    "DishName": "菜名",
+    "UnitPrice": "单价",
+    "Quantity": "数量",
+    "Subtotal": "小计",
+    "Total": "合计",
+    "modalTitle": "请选择就餐方式",
+    "modalBody": "请您选择是打包外带还是在店内用餐。",
+    "confirmbutton": "确认",
+    "free": "免费"
+}

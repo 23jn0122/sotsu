@@ -1,0 +1,20 @@
+{
+    "title": "Bát cơm ngon nhất",
+    "gokeitext": "Tổng cộng",
+    "sizeidText": [
+        "Nhỏ",
+        "Vừa",
+        "Lớn",
+        "Cực lớn"
+    ],
+    "orderNo": "Số đơn hàng",
+    "countdownElement1": "Trở về trang chủ trong",
+    "countdownElement2": "Đang in đơn hàng. Còn lại",
+    "second": "giây",
+    "remind1": "In đã hoàn tất, vui lòng nhận số đơn hàng.",
+    "thank_you_title": "Cảm ơn bạn đã đặt hàng!",
+    "lead": "Đơn hàng của bạn đã được nhận thành công.",
+    "remind2": "Hiện tại, đơn hàng đang được in. Vui lòng chú ý nhận hàng.",
+    "Total": "Tổng cộng",
+    "print": "Đang in đơn hàng, vui lòng chờ một lát."
+}

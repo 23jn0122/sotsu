@@ -1,0 +1,30 @@
+{
+    "welcome": "Welcome to the world's best bowl",
+    "scollmenu": "Popular Menu",
+    "menu": "Menu",
+    "titlebtnkuponn": "Coupon Information",
+    "titlebtnComment": "Message Board",
+    "titlebtnquestion": "Frequently Asked Questions",
+    "title": "World's Best Bowl",
+    "btnkuponn": "Coupon",
+    "btnComment": "Message board",
+    "popularmenu": "Popular Menu",
+    "Categorie": "Category",
+    "news": "News",
+    "carttext": "Please add items to your cart",
+    "descriptiontext": "No explanation",
+    "cart": "Shopping Cart",
+    "gokeitext": "Total",
+    "sizeidText": [
+        "Small",
+        "Regular",
+        "Large",
+        "Extra Large"
+    ],
+    "sidemenuTitle": "Would you like some side menu to go with it?",
+    "addToCart": "add to the cart",
+    "remind": "Please select portion size",
+    "optiontext": "No >30 pieces",
+    "amount": "Amount",
+    "toastText": "items added"
+}

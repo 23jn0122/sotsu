@@ -1,0 +1,20 @@
+{
+    "title": "World's Best Bowl",
+    "gokeitext": "Total",
+    "sizeidText": [
+        "Small",
+        "Regular",
+        "Large",
+        "Extra Large"
+    ],
+    "orderNo": "Order No",
+    "countdownElement1": "Returning to the homepage in",
+    "countdownElement2": "Printing order, remaining ",
+    "second": "second",
+    "remind1": "The printing is complete. Please collect your order number.",
+    "thank_you_title": "Thank you for your order!",
+    "lead": "Your order has been received successfully.",
+    "remind2": "Currently printing your order. Please be ready to collect.",
+    "Total": "Total",
+    "print": "Printing the order, please wait a moment."
+}

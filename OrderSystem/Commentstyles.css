@@ -1,0 +1,251 @@
+.container {
+    margin-top: 100px !important;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.message-card {
+    position: relative;
+    display: flex;
+    align-items: start;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    flex-direction: column;
+
+}
+
+.selected-avatar {
+    border: 2px solid #007bff;
+}
+
+.avatar-button {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-button button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+.avatar-button img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.avatar2 {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.back-top {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.top-box,
+.back-box {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ccc;
+    margin: 5px 0;
+}
+
+.back-icon.top-icon {
+    margin-right: 10px;
+}
+
+.name-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-delete {
+    position: absolute;
+    right: 10px;
+
+}
+
+.message-card p {
+    margin: 0;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word;
+}
+
+#messages {
+    min-height: 920px;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+p {
+    margin: 15px 5 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background-color: #4CAF50;
+    ;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 30px;
+    margin-left: 120px;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #45a049;
+}
+
+input[type="button"] {
+    background-color: #dc3545;
+}
+
+input[type="button"]:hover {
+    background-color: #c82333;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.label {
+    display: block;
+    /* ブロックレベル要素化する */
+    float: left;
+    /* 要素の左寄せ・回り込を指定する */
+    margin: 5px;
+    /* ラベル外側の余白を指定する */
+    width: 130px;
+    /* ラベルの横幅を指定する */
+    height: 45px;
+    /* ラベルの高さを指定する */
+    text-align: center;
+    /* テキストのセンタリングを指定する */
+    line-height: 45px;
+    /* 行の高さを指定する */
+    padding-left: 5px;
+    /* ラベル内左側の余白を指定する */
+    padding-right: 5px;
+    /* ラベル内右側の余白を指定する */
+    cursor: pointer;
+    /* マウスカーソルの形（リンクカーソル）を指定する */
+    border: 2px solid #006DD9;
+    /* ラベルの境界線を実線で指定する */
+    border-radius: 5px;
+    /* 角丸を指定する */
+}
+
+input[type="checkbox"]:checked+label {
+    background: #31A9EE;
+    /* マウス選択時の背景色を指定する */
+    color: #ffffff;
+    /* マウス選択時のフォント色を指定する */
+}
+
+input[type="radio"]:checked+label {
+    background: #31A9EE;
+    /* マウス選択時の背景色を指定する */
+    color: #ffffff;
+    /* マウス選択時のフォント色を指定する */
+}
+
+/* 星のスタイル */
+.star-rating {
+    display: flex;
+    font-size: 2rem;
+    color: #ccc;
+    /* デフォルトは灰色 */
+}
+
+.star-rating .star {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.star-rating .star.selected {
+    /* 選択された時の色 */
+    color: gold;
+}

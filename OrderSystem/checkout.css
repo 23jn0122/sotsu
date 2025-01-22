@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.container {
+    flex: 1;
+}
+
+
+.container {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky {
+    position: sticky;
+    bottom: 10px;
+}

@@ -1,0 +1,25 @@
+#header {
+    background-color: #ff554e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+#logo img {
+    transition: max-height 0.3s;
+}
+
+#title {
+    transition: font-size 0.3s;
+}
+
+.shrink #logo img {
+    max-height: 50px;
+}
+
+.shrink #title {
+    font-size: 1.5em;
+}

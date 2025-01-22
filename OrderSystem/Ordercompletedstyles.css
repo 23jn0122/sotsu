@@ -1,0 +1,46 @@
+body {
+    background-color: #f8f9fa;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.thank-you-container {
+    margin-top: 100px;
+    background: #ffffff;
+    border-radius: 10px;
+    min-height: 88vh;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+}
+
+.thank-you-title {
+    color: #ff6f61;
+}
+
+.btn-custom {
+    background-color: #ff6f61;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #ff4a4a;
+}
+
+.countdown {
+    font-size: 1.5rem;
+    color: #ff6f61;
+    margin-top: 20px;
+}
+
+.receipt {
+    max-width: 400px;
+    margin: auto;
+
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,20 @@
+{
+    "title": "世界第一盖饭",
+    "gokeitext": "合计",
+    "sizeidText": [
+        "小份",
+        "普通",
+        "大份",
+        "特大份"
+    ],
+    "orderNo": "订单号",
+    "countdownElement1": "返回主页还有",
+    "countdownElement2": "正在打印订单，还剩",
+    "second": "秒",
+    "remind1": "打印完成，请领取订单编号。",
+    "thank_you_title": "感谢您的订单！",
+    "lead": "您的订单已成功接收。",
+    "remind2": "当前，正在打印订单。请注意领取。",
+    "Total": "总计",
+    "print": "打印订单中，请稍后"
+}

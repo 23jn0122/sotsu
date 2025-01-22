@@ -1,0 +1,26 @@
+{
+    "title": "世界一の丼",
+    "gokeitext": "合計",
+    "sizeidText": [
+        "小盛",
+        "普通",
+        "大盛り",
+        "特盛"
+    ],
+    "OrderConfirmation": "注文確認",
+    "Pleasechoose": "選択してください",
+    "DineIn": "店内",
+    "TakeAway": "持ち帰り",
+    "Back": "戻る",
+    "Order": "注文する",
+    "Photo": "写真",
+    "DishName": "料理名",
+    "UnitPrice": "単価",
+    "Quantity": "数",
+    "Subtotal": "小計",
+    "Total": "合計",
+    "modalTitle": "食事方法を選択してください",
+    "modalBody": "持ち帰るか店内で食べるかを選択してください。",
+    "confirmbutton": "確認",
+    "free": "無料"
+}

@@ -1,0 +1,26 @@
+{
+    "title": "Bát cơm ngon nhất",
+    "gokeitext": "Tổng cộng",
+    "sizeidText": [
+        "Nhỏ",
+        "Vừa",
+        "Lớn",
+        "Cực lớn"
+    ],
+    "OrderConfirmation": "Xác nhận đơn hàng",
+    "Pleasechoose": "Vui lòng chọn",
+    "DineIn": "Ăn tại chỗ",
+    "TakeAway": "Mang đi",
+    "Back": "Quay lại",
+    "Order": "Đặt hàng",
+    "Photo": "Ảnh",
+    "DishName": "Tên món ăn",
+    "UnitPrice": "Đơn giáe",
+    "Quantity": "Số lượng",
+    "Subtotal": "Thành tiền",
+    "Total": "Tổng cộng",
+    "modalTitle": "Vui lòng chọn phương thức ăn uống",
+    "modalBody": "Xin vui lòng chọn giữa việc mang đi hoặc ăn tại chỗ.",
+    "confirmbutton": "Xác nhận",
+    "free": "miễn"
+}

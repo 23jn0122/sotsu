@@ -1,0 +1,785 @@
+/* Header */
+#header {
+    background-color: #ff554e !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#logo {
+    flex: 0 1 auto;
+}
+
+#logo img {
+    max-height: 80px;
+    transition: max-height 0.5s;
+}
+
+/* Header Title */
+#header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #FFD700;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+#weborder-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* 画像間の間隔 */
+    margin-top: 100px; /* オクルージョンを避けるためのヘッダーからの距離*/
+    padding: 20px;
+}
+
+.weborder-img {
+    max-width: 350px; /* 画像の幅を広げる */
+    height: auto;
+    border-radius: 10px; /* 丸い角を追加する */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 影を追加する */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.weborder-img:hover {
+    transform: scale(1.1); /* マウスオーバーによるズーム効果 */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* ホバーシャドウを強化する */
+}
+
+#step-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+.step-item {
+    position: relative;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    color: #cd6133;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.step-item.active {
+    background: #cd6133;
+    color: white;
+}
+
+.step-item.completed {
+    background: #8c9e5e;
+    color: white;
+}
+
+.step-arrow {
+    color: #cd6133;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+/* 完了したステップの矢印の色 */
+.completed + .step-arrow {
+    color: #8c9e5e;
+}
+
+.step-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.step-description {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Hover effect for steps */
+.step-item:hover .step-title {
+    color: #FFD700; /* ホバリングするとタイトルが金色に変わります */
+}
+
+.step-item:hover .step-description {
+    text-decoration: underline; /* ホバー時に説明に下線を引く */
+}
+
+/*予約セクションのスタイル */
+#reservation-info {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+#reservation-info h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+}
+
+#reservation-info p {
+    margin-bottom: 15px;
+}
+
+#reservation-info a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+#reservation-info a:hover {
+    text-decoration: underline;
+}
+
+#reservation-info strong {
+    color: #555;
+    font-weight: bold;
+}
+
+
+
+
+.required-note {
+    color: red; /* 赤に設定 */
+    
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 容器 */
+#reservation-info {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+}
+
+/* タイトルのスタイル */
+#reservation-info h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+}
+
+/* ラジオボタンのコンテナ */
+.radio-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* 单选按钮的样式 */
+.radio-label {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* タイムピッカーコンテナ */
+.time-selection {
+    display: none;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* 時間選択入力ボックス */
+#pickup-date {
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 220px;
+    text-align: center;
+}
+
+/* 「時間を指定する」を選択すると時間セレクターが表示されます */
+input[type="radio"]:checked + .radio-label + .time-selection {
+    display: block;
+}
+
+#title {
+    font-family: 'Courier New', monospace;
+    font-size: 2em;
+    font-weight: bold;
+    color: #0a0a01;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+
+
+
+.form-link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;  /*必要に応じて調整可能 */
+}
+
+.form-link {
+    display: inline-block;
+    padding: 20px 60px;
+    background-color: #cd6133;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* ホバー効果 */
+.form-link:hover {
+    background-color: #cd6133;
+    transform: scale(1.05);
+}
+
+/* クリック効果 */
+.form-link:active {
+    background-color: #3e8e41;
+}
+
+@media (max-width: 768px) {
+    #header {
+        padding: 0 10px;
+        flex-wrap: wrap;
+    }
+
+    #header-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+  
+
+    #reservation-info {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
+
+
+
+
+/* Main Content */
+
+/* 主体 */
+main {
+    margin-top: 20px; /* ヘッダーとの重複を避ける */
+    padding: 20px;
+}
+
+/* Category Section */
+#category-settings {
+    max-width: 1200px; /* 全幅を大きくする */
+    margin: 0 auto; /* センターディスプレイ */
+    padding: 30px; /* 增加パディングを増やす内边距 */
+    background-color: #f9f9f9; /* 背景色 */
+    border-radius: 12px; /* 丸い角 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* 影を追加する */
+    margin-top: 30px;
+}
+
+/* Heading style */
+#category-settings h2 {
+    font-size: 2.4rem; /* フォントサイズを大きくする */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px; /* タイトルと項目の間隔を広げる */
+    color: #333;
+    border-bottom: 4px solid #FFD700; /* 黄色の下線を追加する */
+    padding-bottom: 12px;
+}
+
+/* Category list container */
+#categories {
+    display: flex;
+    justify-content: flex-start; /* 左揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    flex-wrap: nowrap; /* 改行はありません */
+    gap: 20px; /* カテゴリ項目間の間隔を広げる */
+    margin-top: 20px;
+    overflow-x: auto; /* コンテンツが多すぎる場合は、横にスクロールできます*/
+}
+
+/* Category list item */
+#categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* 間隔を広げる */
+}
+
+#categories ul li {
+    background-color: #fff; /* 白い背景 */
+    border: 1px solid #ddd; /* フレーム */
+    border-radius: 8px; /* 丸い角 */
+    padding: 15px 20px; /* パディングを増やす */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    min-width: auto; /* 最小幅制限を削除する */
+    display: inline-block;
+    white-space: nowrap; /* テキストの折り返しを防止する */
+    box-sizing: border-box; /* 幅の計算にパディングが含まれていることを確保する */
+}
+
+/* Dynamic width based on text length */
+#categories ul li h3 {
+    font-size: 1.4rem; /* フォントサイズを大きくする */
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* タイトルテキストが水平方向に表示されるようにする */
+}
+
+/* Hover effect for category items */
+#categories ul li:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px); /* マウスオーバーで上に移動 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjusting widths dynamically */
+#categories ul li {
+    width: auto; /* コンテンツの長さに基づいて幅を調整する */
+    padding-left: 20px;
+    padding-right: 20px;
+    border-width: 1px; /* デフォルトの境界線の幅 */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #category-settings {
+        padding: 20px; /* 幅に合わせてパディングを追加する */
+    }
+
+    #categories ul li {
+        width: auto; /* 小さな画面に適応し、適応幅を維持します */
+    }
+}
+
+@media (max-width: 480px) {
+    #category-settings h2 {
+        font-size: 1.8rem; /* 小さな画面でのタイトル */
+    }
+
+    #categories {
+        gap: 15px; /* 小さな画面での間隔を調整する */
+    }
+
+    #categories ul li {
+        padding: 12px 18px; /* 小さな画面のパディングを調整する */
+    }
+}
+
+
+
+/* メニュー項目 */
+/* カテゴリとメニュー項目の主なスタイル */
+/* 全体的なコンテナのスタイル */
+/* main {
+    /* margin-top: 150px; 避免和 header 重叠 */
+    /* padding: 20px; */
+/* } */ 
+
+#category-settings {
+    max-width: 1200px; /* 体の幅を広げる */
+    margin: 0 auto; /* センターディスプレイ */
+    padding: 30px; /* パディングを増やす */
+    background-color: #f9f9f9; /* 背景色 */
+    border-radius: 12px; /* 丸い角 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* 影を追加する */
+    margin-top: 30px;
+}
+
+#categories li.active {
+    background-color: rgb(233, 229, 13);
+    color: white;
+}
+/* Heading style */
+#category-settings h2 {
+    font-size: 2.4rem; /* フォントサイズを大きくする */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px; /* タイトルと項目の間隔を広げる */
+    color: #333;
+    border-bottom: 4px solid #FFD700; /* 黄色の下線を追加する */
+    padding-bottom: 12px;
+}
+
+/* Category list container */
+#categories {
+    display: flex;
+    justify-content: flex-start; /* 左揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    flex-wrap: nowrap; /* 改行はありません */
+    gap: 20px; /* カテゴリ項目間の間隔を広げる */
+    margin-top: 20px;
+    overflow-x: auto; /* コンテンツが多すぎる場合は、横にスクロールできます */
+}
+
+/* Category list item */
+#categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* 間隔を広げる */
+}
+
+#categories ul li {
+    background-color: #fff; /* 白い背景 */
+    border: 1px solid #ddd; /* フレーム */
+    border-radius: 8px; /* 丸い角 */
+    padding: 15px 20px; /* パディングを増やす */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    min-width: auto; /* 最小幅制限を削除する */
+    display: inline-block;
+    white-space: nowrap; /* テキストの折り返しを防止する */
+    box-sizing: border-box; /* 幅の計算にパディングが含まれていることを確認してください */
+}
+
+/* Dynamic width based on text length */
+#categories ul li h3 {
+    font-size: 1.4rem; /* フォントサイズを大きくする */
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* タイトルテキストが水平方向に表示されるようにする */
+}
+
+/* Hover effect for category items */
+#categories ul li:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px); /* マウスオーバーで上に移動 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjusting widths dynamically */
+#categories ul li {
+    width: auto; /* コンテンツの長さに基づいて幅を調整する */
+    padding-left: 20px;
+    padding-right: 20px;
+    border-width: 1px; /* デフォルトの境界線の幅 */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #category-settings {
+        padding: 20px; /* 幅に合わせてパディングを追加する */
+    }
+
+    #categories ul li {
+        width: auto; /* 小さな画面に適応し、適応幅を維持します */
+    }
+}
+
+@media (max-width: 480px) {
+    #category-settings h2 {
+        font-size: 1.8rem; /* 小さな画面でのタイトル */
+    }
+
+    #categories {
+        gap: 15px; /* 小さな画面での間隔を調整する */
+    }
+
+    #categories ul li {
+        padding: 12px 18px; /* 小さな画面のパディングを調整する */
+    }
+}
+
+
+/* レスポンシブ デザイン: 小さな画面デバイス向けにレイアウトを調整 */
+@media (max-width: 768px) {
+    #categories {
+        justify-content: center;
+    }
+
+    .category-item {
+        width: 180px;
+        padding: 15px;
+    }
+
+    .category-item h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* メニュー項目セクション */
+#menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.menu-item-image {
+    max-width: 200px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.open-modal-btn {
+    background-color: #e60012;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* モーダルボックススタイル */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-header {
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #e60012;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quantity-selector input {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.options-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 0 20px;
+}
+
+.options-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.options-group input[type="radio"],
+.options-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#clear-options {
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.modal-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.total,
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.total-price,
+.cart-total-price {
+    color: #e60012;
+    font-weight: bold;
+}
+
+#add-to-cart {
+    width: 100%;
+    padding: 15px;
+    background-color: #cd6133;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#add-to-cart:hover {
+    background-color: #b54b1e;
+}
+
+/* 分隔线样式 */
+.size-options,
+.topping-options,
+.set-options {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* ショッピングカートのスタイル */
+#cart {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.remove-item {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+
+

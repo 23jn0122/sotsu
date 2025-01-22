@@ -1,0 +1,26 @@
+{
+    "title": "World's Best Bowl",
+    "gokeitext": "Total",
+    "sizeidText": [
+        "Small",
+        "Regular",
+        "Large",
+        "Extra Large"
+    ],
+    "OrderConfirmation": "Order Confirmation",
+    "Pleasechoose": "Please choose",
+    "DineIn": "Dine In",
+    "TakeAway": "Take Away",
+    "Back": "Back",
+    "Order": "Order",
+    "Photo": "Photo",
+    "DishName": "Dish Name",
+    "UnitPrice": "Unit Price",
+    "Quantity": "Quantity",
+    "Subtotal": "Subtotal",
+    "Total": "Total",
+    "modalTitle": "Please choose your dining option",
+    "modalBody": "Please select whether to take away or dine in.",
+    "confirmbutton": "Confirm",
+    "free": "free"
+}

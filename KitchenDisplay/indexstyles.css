@@ -1,0 +1,47 @@
+.container {
+    max-width: 1800px !important;
+    padding-top: 100px;
+}
+
+
+.menu_canceled {
+    background-color: #ff3333b0 !important;
+}
+
+.red {
+    background-color: red !important;
+}
+
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-dialog {
+    max-width: 2100px;
+    width: 90%;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    /* スクロールバーを隠す */
+    background: transparent;
+    /* スクロールバーの背景を透明にする */
+}
+
+#cartItems::-webkit-scrollbar {
+    width: 0;
+    /* スクロールバーを隠す */
+    background: transparent;
+    /* スクロールバーの背景を透明にする */
+}
+
+.modal-body {
+    min-height: 600px;
+    max-height: 600px;
+    /* 最大高さを設定する */
+    overflow-y: auto;
+    /* コンテンツが超過した場合に垂直スクロールバーを有効にする */
+}
